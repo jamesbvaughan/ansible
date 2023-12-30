@@ -1,0 +1,74 @@
+---
+- name: Install packages
+  hosts: localhost
+
+  tasks:
+    - name: Update the cache and upgrade packages
+      kewlfft.aur.aur:
+        update_cache: true
+        upgrade: true
+
+    - name: Install base utilities
+      kewlfft.aur.aur:
+        name:
+          - base
+          - base-devel
+          - intel-ucode
+          - linux
+          - linux-firmware
+
+    - name: Install sway environment packages
+      kewlfft.aur.aur:
+        name:
+          - bemenu
+          - j4-dmenu-desktop
+          - sway
+          - swaybg
+          - swayidle
+          - swaylock
+          - swaync
+          - waybar
+          - wl-clipboard
+          - wob
+
+    - name: Install general programs
+      kewlfft.aur.aur:
+        name:
+          - 1password
+          - 1password-cli
+          - ansible
+          - ansible-core
+          - autopep8
+          - bat
+          - brightnessctl
+          - chrony
+          - dmidecode
+          - dtrx
+          - efibootmgr
+          - eza
+          - fzf
+          - gammastep
+          - git
+          - gnome-keyring
+          - htop
+          - nautilus
+          - neovim
+          - networkmanager
+          - networkmanager-dispatcher-chrony
+          - obsidian
+          - qutebrowser
+          - ripgrep
+          - rofi
+          - shellcheck
+          - shfmt
+          - starship
+          - stow
+          - tldr
+          - trash-cli
+          - tree
+          - unzip
+          - vale
+          - volta-bin
+          - wezterm
+          - yay
+          - zsh

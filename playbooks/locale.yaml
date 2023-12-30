@@ -1,0 +1,17 @@
+---
+- name: Configure locale
+  hosts: localhost
+  become: true
+
+  tasks:
+   - name: Ensure desired locale is uncommented in locale.gen
+     lineinfile:
+       path: /etc/locale.gen
+       regexp: "^# {{ item }}"
+       line: "{{ item }}"
+       state: present
+     with_items:
+       - "en_US.UTF-8 UTF-8"  # Replace with your desired locale(s)
+
+   - name: Generate locales
+     command: locale-gen

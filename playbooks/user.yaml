@@ -1,0 +1,12 @@
+---
+- name: Configure system
+  hosts: localhost
+  become: true # allows superuser privileges
+
+  tasks:
+    - name: Ensure 'james' user exists
+      user:
+        name: james
+        shell: /usr/bin/zsh
+        groups:
+          - wheel

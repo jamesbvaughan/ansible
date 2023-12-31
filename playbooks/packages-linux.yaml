@@ -22,11 +22,12 @@
         name:
           - bemenu            # a dmenu-like input picker
           - j4-dmenu-desktop  # an application picker
+          - grimshot          # screenshot utility
           - rofi              # another dmenu-like input picker
           - sway              # the window manager
           - swaybg            # sets the wallpaper
           - swayidle
-          - swaylock
+          - swaylock-effects  # lock screen
           - swaync            # notification daemon and sidebar
           - waybar            # toolbars
           - wl-clipboard      # wayland clipboard tool

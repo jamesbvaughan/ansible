@@ -1,4 +1,4 @@
-# james' ansible configs
+# James' Ansible configs
 
 These playbooks should make it quicker to set up new personal computers.
 
@@ -22,4 +22,13 @@ Install the English dictionary:
 
 ```bash
 /usr/share/qutebrowser/scripts/dictcli.py install en-US
+```
+
+#### spotify-tui
+
+In order for the Spotify part of waybar to work, you need to authenticate with
+Spotify:
+
+```bash
+spt
 ```

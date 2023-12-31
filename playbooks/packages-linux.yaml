@@ -24,6 +24,7 @@
           - j4-dmenu-desktop  # an application picker
           - grimshot          # screenshot utility
           - rofi              # another dmenu-like input picker
+          - spotify-tui       # spotify client that my waybar config uses
           - sway              # the window manager
           - swaybg            # sets the wallpaper
           - swayidle
@@ -46,6 +47,7 @@
           - networkmanager
           - networkmanager-dispatcher-chrony
           - python-adblock # needed for qutebrowser's ad blocking
+          - python-requests # needed for various things, including waybar weather
           - qutebrowser
           - trash-cli # needed for obsidian's trash feature
           - yay

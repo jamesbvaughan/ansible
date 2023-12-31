@@ -10,3 +10,5 @@
         shell: /usr/bin/zsh
         groups:
           - wheel
+          - docker
+          - input

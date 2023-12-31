@@ -1,0 +1,99 @@
+---
+- name: Install packages for linux machines
+  hosts: localhost
+
+  tasks:
+    - name: Update the cache and upgrade packages
+      kewlfft.aur.aur:
+        update_cache: true
+        upgrade: true
+
+    - name: Install base utilities
+      kewlfft.aur.aur:
+        name:
+          - base
+          - base-devel
+          - intel-ucode
+          - linux
+          - linux-firmware
+
+    - name: Install sway environment packages
+      kewlfft.aur.aur:
+        name:
+          - bemenu            # a dmenu-like input picker
+          - j4-dmenu-desktop  # an application picker
+          - rofi              # another dmenu-like input picker
+          - sway              # the window manager
+          - swaybg            # sets the wallpaper
+          - swayidle
+          - swaylock
+          - swaync            # notification daemon and sidebar
+          - waybar            # toolbars
+          - wl-clipboard      # wayland clipboard tool
+          - wob               # progress indicator (for volume and brighness)
+
+    - name: Install other linux-specific packages
+      kewlfft.aur.aur:
+        name:
+          - brightnessctl
+          - chrony
+          - dmidecode
+          - efibootmgr
+          - gammastep     # like f.lux
+          - gnome-keyring
+          - htop
+          - networkmanager
+          - networkmanager-dispatcher-chrony
+          - python-adblock # needed for qutebrowser's ad blocking
+          - qutebrowser
+          - trash-cli # needed for obsidian's trash feature
+          - yay
+
+    - name: Install general programs
+      kewlfft.aur.aur:
+        name:
+          - 1password
+          - 1password-cli
+          - ansible
+          - ansible-core
+          - bat
+          - dtrx
+          - docker
+          - eza         # ls replacement
+          - fzf
+          - git
+          - jq
+          - mprocs
+          - neovim
+          - obsidian
+          - ripgrep
+          - shellcheck
+          - shfmt
+          - spotify-launcher
+          - starship
+          - stow
+          - tldr
+          - tree
+          - unzip
+          - vale
+          - volta-bin
+          - wezterm
+          - zsh
+
+- name: Install and set up docker
+  hosts: localhost
+
+  tasks:
+    - name: Install docker
+      become: true
+      pacman:
+        name:
+          - docker
+          - docker-compose
+
+    - name: Enable docker service socket
+      become: true
+      systemd_service:
+        name: docker.socket
+        state: started
+        enabled: true

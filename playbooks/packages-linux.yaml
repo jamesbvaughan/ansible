@@ -83,6 +83,61 @@
           - wezterm
           - zsh
 
+
+# laptop power management
+- name: Install and set up tlp
+  hosts: localhost
+
+  tasks:
+    - name: Install tlp programs
+      kewlfft.aur.aur:
+        name:
+          - ethtool       # disables wake-on-lan
+          - tlp           # laptop power management
+          - smartmontools # more info in tlp-stat
+
+    - name: Enable the tlp service
+      become: true
+      systemd_service:
+        name: tlp
+        state: started
+        enabled: true
+
+    - name: Mask the rfkill service
+      become: true
+      systemd_service:
+        name: systemd-rfkill.service
+        state: stopped
+        enabled: false
+        masked: true
+
+    - name: Mask the rfkill socket
+      become: true
+      systemd_service:
+        name: systemd-rfkill.socket
+        state: stopped
+        enabled: false
+        masked: true
+
+
+# cpu temp management (intel only)
+- name: Install and set up thermald
+  become: true
+  hosts: localhost
+
+  tasks:
+    - name: Install thermald programs
+      pacman:
+        name:
+          - thermald
+
+    - name: Enable the service
+      systemd_service:
+        name: thermald
+        state: started
+        enabled: true
+
+
 - name: Install and set up docker
   hosts: localhost
 

@@ -11,7 +11,6 @@
     - import_tasks: tasks/bluetooth.yaml
     - import_tasks: tasks/docker.yaml
     - import_tasks: tasks/file_limits.yaml
-    - import_tasks: tasks/laptop_power_management.yaml
     - import_tasks: tasks/reflector.yaml
     - import_tasks: tasks/ssd_trimming.yaml
     - import_tasks: tasks/qutebrowser.yaml

@@ -16,7 +16,7 @@
   changed_when: 'result.stderr is search("LINK: ")'
 
 - name: Stow Linux config files
-  shell: "stow --target {{ ansible_env.HOME }} --verbose=2 hushlogin qutebrowser sway wob zathura"
+  shell: "stow --target {{ ansible_env.HOME }} --verbose=2 hushlogin mpv qutebrowser sway wob zathura"
   args:
     chdir: "{{ dotfiles_directory }}/linux"
   register: result

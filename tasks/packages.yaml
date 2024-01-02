@@ -66,4 +66,5 @@
       - python-adblock  # needed for qutebrowser's ad blocking
       - python-requests # needed for various things, including waybar weather
       - trash-cli       # needed for obsidian's trash feature
+      - umpv            # video player
       - yay

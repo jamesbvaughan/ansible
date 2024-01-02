@@ -12,14 +12,16 @@
       # Sway environment
       - bemenu            # a dmenu-like input picker
       - brightnessctl     # display brightness controller
-      - j4-dmenu-desktop  # an application picker
       - gammastep         # like f.lux
+      - geoclue           # for gammastep to know where we are
       - grimshot          # screenshot utility
+      - j4-dmenu-desktop  # an application picker
+      - lxsession         # authentication agent
       - rofi              # another dmenu-like input picker
       - spotify-tui       # spotify client that my waybar config uses
       - sway              # the window manager
       - swaybg            # sets the wallpaper
-      - swayidle
+      - swayidle          # idle manager
       - swaylock-effects  # lock screen
       - swaync            # notification daemon and sidebar
       - waybar            # toolbars

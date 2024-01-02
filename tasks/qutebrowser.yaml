@@ -1,0 +1,17 @@
+- name: Check current default web browser
+  command: xdg-settings get default-web-browser
+  register: current_browser
+  changed_when: false
+
+- name: Set default web browser to Qutebrowser
+  command: xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
+  when: current_browser.stdout != "org.qutebrowser.qutebrowser.desktop"
+
+- name: Check if English (US) dictionary is installed for Qutebrowser
+  command: /usr/share/qutebrowser/scripts/dictcli.py list
+  register: dict_list
+  changed_when: false
+
+- name: Install English (US) dictionary for Qutebrowser
+  command: /usr/share/qutebrowser/scripts/dictcli.py install en-US
+  when: "'en-US' not in dict_list.stdout"

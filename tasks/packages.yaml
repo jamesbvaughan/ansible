@@ -1,0 +1,67 @@
+- name: Install packages
+  kewlfft.aur.aur:
+    name:
+      # Base system
+      - base
+      - base-devel
+      - intel-ucode
+      - linux
+      - linux-firmware
+      - linux-lts
+
+      # Sway environment
+      - bemenu            # a dmenu-like input picker
+      - brightnessctl     # display brightness controller
+      - j4-dmenu-desktop  # an application picker
+      - gammastep         # like f.lux
+      - grimshot          # screenshot utility
+      - rofi              # another dmenu-like input picker
+      - spotify-tui       # spotify client that my waybar config uses
+      - sway              # the window manager
+      - swaybg            # sets the wallpaper
+      - swayidle
+      - swaylock-effects  # lock screen
+      - swaync            # notification daemon and sidebar
+      - waybar            # toolbars
+      - wl-clipboard      # wayland clipboard tool
+      - wob               # progress indicator (for volume and brighness)
+
+      # Terminal utilities
+      - dtrx
+      - htop
+      - jq
+      - tldr
+      - tree
+      - unzip
+
+      # Dev tools
+      - 1password-cli
+      - git
+      - mprocs
+      - neovim
+      - shellcheck
+      - shfmt
+      - vale
+      - volta-bin
+
+      # System things
+      - chrony
+      - gnome-keyring
+      - networkmanager
+      - networkmanager-dispatcher-chrony
+
+      # Graphical programs
+      - 1password
+      - obsidian
+      - qutebrowser
+      - spotify-launcher
+      - wezterm
+
+      # Misc
+      - ansible
+      - ansible-core
+      - noto-fonts      # basic font coverage
+      - python-adblock  # needed for qutebrowser's ad blocking
+      - python-requests # needed for various things, including waybar weather
+      - trash-cli       # needed for obsidian's trash feature
+      - yay

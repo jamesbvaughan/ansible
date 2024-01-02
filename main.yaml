@@ -1,0 +1,16 @@
+- name: Configure system
+  hosts: all
+
+  tasks:
+    - import_tasks: tasks/locale.yaml
+    - import_tasks: tasks/pacman_configuration.yaml
+    - import_tasks: tasks/packages.yaml
+    - import_tasks: tasks/shell.yaml
+    - import_tasks: tasks/user.yaml
+    - import_tasks: tasks/dotfiles.yaml
+    - import_tasks: tasks/bluetooth.yaml
+    - import_tasks: tasks/docker.yaml
+    - import_tasks: tasks/file_limits.yaml
+    - import_tasks: tasks/laptop_power_management.yaml
+    - import_tasks: tasks/reflector.yaml
+    - import_tasks: tasks/ssd_trimming.yaml

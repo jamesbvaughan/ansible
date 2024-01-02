@@ -1,0 +1,11 @@
+- name: Install docker
+  pacman:
+    name:
+      - docker
+      - docker-compose
+
+- name: Enable docker service socket
+  systemd_service:
+    name: docker.socket
+    state: started
+    enabled: true

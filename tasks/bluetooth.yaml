@@ -1,0 +1,12 @@
+# https://wiki.archlinux.org/title/Bluetooth
+- name: Install bluetooth packages
+  pacman:
+    name:
+      - bluez
+      - bluez-utils
+
+- name: Enable the bluetooth service
+  systemd_service:
+    name: bluetooth
+    state: started
+    enabled: true

@@ -1,0 +1,13 @@
+# https://wiki.archlinux.org/title/Pacman#Enabling_parallel_downloads
+- name: Enable parallel pacman downloads
+  lineinfile:
+    path: /etc/pacman.conf
+    regexp: "^#? *ParallelDownloads *= *[0-9]*"
+    line: "ParallelDownloads = 5"
+
+# https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
+- name: Enable automated pacman cache clearing
+  systemd_service:
+    name: paccache.timer
+    state: started
+    enabled: true

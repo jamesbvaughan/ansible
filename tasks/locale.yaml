@@ -1,0 +1,16 @@
+- name: Ensure desired locale is uncommented in locale.gen
+  lineinfile:
+    path: /etc/locale.gen
+    regexp: "^#? *en_US.UTF-8 UTF-8"
+    line: "en_US.UTF-8 UTF-8"
+
+- name: Check current locale
+  shell: "locale | grep -q 'LANG=en_US.UTF-8'"
+  register: locale_check
+  changed_when: false
+  failed_when: false
+
+- name: Generate locales
+  become: true
+  command: locale-gen
+  when: locale_check.rc != 0

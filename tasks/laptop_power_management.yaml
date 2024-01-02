@@ -1,0 +1,35 @@
+# https://wiki.archlinux.org/title/TLP
+- name: Install power management programs
+  pacman:
+    name:
+      - ethtool       # disables wake-on-lan
+      - tlp           # laptop power management
+      - smartmontools # more info in tlp-stat
+      - thermald      # cpu temp management (intel only)
+
+- name: Enable the tlp service
+  systemd_service:
+    name: tlp
+    state: started
+    enabled: true
+
+# https://wiki.archlinux.org/title/TLP#Installation
+- name: Mask the rfkill service
+  systemd_service:
+    name: systemd-rfkill.service
+    state: stopped
+    enabled: false
+    masked: true
+
+- name: Mask the rfkill socket
+  systemd_service:
+    name: systemd-rfkill.socket
+    state: stopped
+    enabled: false
+    masked: true
+
+- name: Enable the thermald service
+  systemd_service:
+    name: thermald
+    state: started
+    enabled: true

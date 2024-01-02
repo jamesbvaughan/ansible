@@ -3,13 +3,13 @@
   hosts: localhost
 
   tasks:
-    - name: Update homebrew
-      homebrew:
-        update_homebrew: true
-
-    - name: Upgrade packages
-      homebrew:
-        upgrade_all: true
+    # - name: Update homebrew
+    #   homebrew:
+    #     update_homebrew: true
+    #
+    # - name: Upgrade packages
+    #   homebrew:
+    #     upgrade_all: true
 
     - name: Install packages
       homebrew:

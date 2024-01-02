@@ -1,0 +1,34 @@
+# https://wiki.archlinux.org/title/Reflector
+- name: Install reflector
+  become: true
+  pacman:
+    name: reflector
+
+- name: Configure reflector country filter
+  become: true
+  lineinfile:
+    path: /etc/xdg/reflector/reflector.conf
+    regexp: "#? *--country"
+    line: "--country us"
+
+- name: Configure reflector sorting
+  become: true
+  lineinfile:
+    path: /etc/xdg/reflector/reflector.conf
+    regexp: "#? *--sort"
+    line: "--sort rate"
+
+# Runs reflector on boot
+- name: Reflector systemd service
+  become: true
+  systemd_service:
+    name: reflector
+    enabled: true
+
+# Runs reflector weekly
+- name: Reflector systemd timer
+  become: true
+  systemd_service:
+    name: reflector.timer
+    state: started
+    enabled: true

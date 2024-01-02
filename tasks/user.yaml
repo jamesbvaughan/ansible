@@ -1,0 +1,8 @@
+- name: Ensure 'james' user exists
+  user:
+    name: james
+    shell: /usr/bin/zsh
+    groups:
+      - wheel
+      - docker
+      - input

@@ -1,0 +1,13 @@
+# This is necessary for things like vite to serve a large number of development
+# files.
+- name: Set a high system file descriptor limit
+  lineinfile:
+    path: /etc/systemd/system.conf
+    regexp: "^#? *DefaultLimitNOFILE=[0-9]*"
+    line: "DefaultLimitNOFILE=65536"
+
+- name: Set a high user file descriptor limit
+  lineinfile:
+    path: /etc/systemd/user.conf
+    regexp: "^#? *DefaultLimitNOFILE=[0-9]*"
+    line: "DefaultLimitNOFILE=65536"

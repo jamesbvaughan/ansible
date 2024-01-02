@@ -1,0 +1,11 @@
+# See https://wiki.archlinux.org/title/Solid_state_drive#Periodic_TRIM
+- name: Install util-linux
+  pacman:
+    name:
+      - util-linux
+
+- name: Enable automated fstrim
+  systemd_service:
+    name: fstrim.timer
+    state: started
+    enabled: true

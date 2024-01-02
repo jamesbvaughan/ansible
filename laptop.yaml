@@ -1,0 +1,6 @@
+- name: Run laptop-specific tasks
+  hosts: all
+
+  tasks:
+    - import_tasks: tasks/laptop_gpu_driver.yaml
+    - import_tasks: tasks/laptop_power_management.yaml

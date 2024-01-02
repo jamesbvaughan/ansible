@@ -1,0 +1,6 @@
+# https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel
+- name: Install laptop GPU driver packages
+  pacman:
+    name:
+      - libva-intel-driver
+      - libva-vdpau-driver

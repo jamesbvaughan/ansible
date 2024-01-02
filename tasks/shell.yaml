@@ -3,6 +3,7 @@
     name:
       - bat         # cat replacement
       - eza         # ls replacement
+      - fd          # find replacement
       - fzf         # a fuzzy-finder
       - ripgrep     # grep replacement
       - starship    # terminal prompt

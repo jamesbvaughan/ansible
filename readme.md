@@ -60,11 +60,17 @@ spt
 
 ## macOS usage
 
-At this point, these playbooks don't do much for macOS.
-Eventually, I'd like to use them to keep installed dev utilities and things in
-sync between my Mac and Linux workstations.
+Initial macOS manual steps:
+- Install ansible
+- Set caps lock to control in system settings
+- Set display resolution in system settings
+- Set trackpad tracking speed
+- Log in to 1Password
 
-For now, I just have one playbook intended for use on macOS:
 ```bash
-ansible-playbook playbooks/packages-macos.yaml
+ansible-playbook -K macos.yaml
 ```
+
+# Helpful resources
+
+- [macOS defaults documentation](https://macos-defaults.com)

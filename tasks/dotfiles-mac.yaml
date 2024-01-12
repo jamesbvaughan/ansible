@@ -1,0 +1,21 @@
+- name: Set stow directory
+  set_fact:
+    dotfiles_directory: "{{ ansible_env.HOME }}/.dotfiles"
+
+- name: Clone dotfiles repo
+  git:
+    repo: "https://github.com/jamesbvaughan/dotfiles.git"
+    dest: "{{ dotfiles_directory }}"
+    update: false
+
+- name: Stow common config files
+  shell: "stow --target {{ ansible_env.HOME }} --verbose=2 git lf luacheck neovim tmux vale wezterm zsh"
+  args:
+    chdir: "{{ dotfiles_directory }}/common"
+  register: result
+  changed_when: 'result.stderr is search("LINK: ")'
+
+- name: Copy fonts
+  copy:
+    src: "{{ dotfiles_directory }}/fonts"
+    dest: "{{ ansible_env.HOME }}/Library/Fonts"

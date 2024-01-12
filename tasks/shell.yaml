@@ -8,9 +8,3 @@
       - ripgrep     # grep replacement
       - starship    # terminal prompt
       - zsh
-
-- name: Install Oh My Zsh
-  git:
-    repo: 'https://github.com/ohmyzsh/ohmyzsh.git'
-    dest: "{{ ansible_env.HOME }}/.oh-my-zsh"
-    update: false

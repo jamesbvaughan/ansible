@@ -1,0 +1,4 @@
+- name: Ensure 'james' user exists
+  user:
+    name: james
+    shell: /opt/homebrew/bin/zsh

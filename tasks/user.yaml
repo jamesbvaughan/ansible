@@ -1,4 +1,5 @@
 - name: Ensure 'james' user exists
+  become: true
   user:
     name: james
     shell: /usr/bin/zsh
@@ -6,3 +7,4 @@
       - wheel
       - docker
       - input
+      - wireshark

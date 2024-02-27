@@ -9,7 +9,7 @@
     update: false
 
 - name: Stow common config files
-  shell: "stow --target {{ ansible_env.HOME }} --verbose=2 git lf luacheck neovim tmux vale wezterm zsh"
+  shell: "stow --target {{ ansible_env.HOME }} --verbose=2 git lf luacheck mprocs neovim tmux vale wezterm zsh"
   args:
     chdir: "{{ dotfiles_directory }}/common"
   register: result

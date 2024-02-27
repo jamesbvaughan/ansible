@@ -19,16 +19,19 @@ pacamn -S git ansible ansible-core neovim
 ```
 
 Then clone this repo:
+
 ```bash
 git clone https://github.com/jamesbvaughan/ansible && cd ansible
 ```
 
 Allow the `wheel` group to use `sudo`:
+
 ```bash
 EDITOR=nvim visudo
 ```
 
 Run the main playbook:
+
 ```bash
 ansible-playbook main.yaml
 ```
@@ -60,16 +63,30 @@ spt
 
 ## macOS usage
 
-Initial macOS manual steps:
-- Install ansible
-- Set caps lock to control in system settings
-- Set display resolution in system settings
-- Set trackpad tracking speed
-- Log in to 1Password
+Install ansible:
+
+```bash
+brew install ansible
+```
+
+Install [`ansible-collection-mac`](https://github.com/geerlingguy/ansible-collection-mac):
+
+```bash
+ansible-galaxy collection install geerlingguy.mac
+```
+
+Run the macOS playbook:
 
 ```bash
 ansible-playbook -K macos.yaml
 ```
+
+macOS manual steps:
+
+- Set caps lock to control in system settings
+- Set display resolution in system settings
+- Set trackpad tracking speed
+- Log in to 1Password
 
 # Helpful resources
 

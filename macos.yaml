@@ -9,6 +9,7 @@
       - autopep8
       - bat
       - cairo
+      - composer
       - dtrx
       - eza
       - fd
@@ -17,10 +18,12 @@
       - git
       - git-lfs
       - htop
+      - java
       - jq
       - mprocs
       - neovim
       - pango
+      - php
       - pixman
       - pkg-config
       - ripgrep
@@ -36,6 +39,7 @@
       - vale
       - volta
       - watch
+      - wget
       - yamlfmt
       - zsh
 

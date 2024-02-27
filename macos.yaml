@@ -11,10 +11,13 @@
       - cairo
       - dtrx
       - eza
+      - fd
       - fzf
+      - gh
       - git
       - git-lfs
       - htop
+      - jq
       - mprocs
       - neovim
       - pango
@@ -25,28 +28,35 @@
       - shfmt
       - starship
       - stow
+      - stylua
       - tldr
       - tmux
       - tree
       - unzip
       - vale
       - volta
+      - watch
+      - yamlfmt
       - zsh
 
     homebrew_cask_apps:
       - 1password
       - arc
-      - cron
+      - dropbox
       - figma
+      - keepingyouawake
       - linear-linear
       - netnewswire
+      - notion-calendar
       - obsidian
       - orbstack
       - raycast
       - slack
       - tailscale
       - spotify
+      - visual-studio-code
       - wezterm
+      - zoom
 
     dockitems_remove:
       - Launchpad
@@ -76,8 +86,8 @@
         pos: 4
       - name: Obsidian
         path: /Applications/Obsidian.app
-      - name: Cron
-        path: /Applications/Cron.app
+      - name: Notion Calendar
+        path: /Applications/Notion Calendar.app
 
     cargo_tmp: /tmp
 

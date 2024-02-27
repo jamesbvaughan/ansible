@@ -74,3 +74,7 @@ ansible-playbook -K macos.yaml
 # Helpful resources
 
 - [macOS defaults documentation](https://macos-defaults.com)
+
+# To-do
+
+- [ ] Add this: https://wezfurlong.org/wezterm/config/lua/config/term.html

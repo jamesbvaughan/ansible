@@ -17,6 +17,7 @@
       - gh
       - git
       - git-lfs
+      - gnu-sed
       - htop
       - java
       - jq

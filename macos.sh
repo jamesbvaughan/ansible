@@ -260,6 +260,14 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.apple.appstore InAppReviewEnabled -int 0
 
 ###############################################################################
+# Font Rendering
+###############################################################################
+
+# Disable font smoothing
+# I added this in order to stop fonts getting cut off in Alacritty
+defaults write -g AppleFontSmoothing -int 0
+
+###############################################################################
 # Kill/restart affected applications                                          #
 ###############################################################################
 

@@ -47,6 +47,7 @@
 
     homebrew_cask_apps:
       - 1password
+      - alacritty
       - arc
       - dropbox
       - figma

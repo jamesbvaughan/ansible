@@ -18,6 +18,7 @@
       - gh
       - git
       - git-lfs
+      - gum
       - gnu-sed
       - htop
       - java
@@ -53,7 +54,9 @@
       - figma
       - keepingyouawake
       - linear-linear
+      - linearmouse
       - netnewswire
+      - notion
       - notion-calendar
       - obsidian
       - orbstack

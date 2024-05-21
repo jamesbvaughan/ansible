@@ -10,6 +10,7 @@
       - bat
       - cairo
       - composer
+      - difftastic
       - dtrx
       - entr
       - eza

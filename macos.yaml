@@ -15,6 +15,7 @@
       - entr
       - eza
       - fd
+      - ffmpeg
       - fzf
       - gh
       - git
@@ -22,6 +23,7 @@
       - gum
       - gnu-sed
       - htop
+      - hugo
       - java
       - jq
       - mprocs
@@ -45,6 +47,7 @@
       - watch
       - wget
       - yamlfmt
+      - yt-dlp
       - zsh
 
     homebrew_cask_apps:

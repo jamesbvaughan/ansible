@@ -43,7 +43,7 @@
       - tree
       - unzip
       - vale
-      - volta
+      # - volta
       - watch
       - wget
       - yamlfmt
@@ -69,6 +69,7 @@
       - tailscale
       - spotify
       - visual-studio-code
+      - vlc
       - wezterm
       - zoom
 

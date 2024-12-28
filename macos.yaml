@@ -19,6 +19,7 @@
       - ffmpeg
       - fzf
       - gh
+      - ghostty
       - git
       - git-lfs
       - gum
@@ -74,36 +75,37 @@
       - wezterm
       - zoom
 
-    dockitems_remove:
-      - Launchpad
-      - Safari
-      - Mail
-      - Maps
-      - FaceTime
-      - Calendar
-      - Notes
-      - Freeform
-      - TV
-      - Music
-      - News
-      - App Store
-
-    dockitems_persist:
-      - name: WezTerm
-        path: /Applications/WezTerm.app
-      - name: Arc
-        path: /Applications/Arc.app
-        pos: 2
-      - name: Slack
-        path: /Applications/Slack.app
-        pos: 3
-      - name: Spotify
-        path: /Applications/Spotify.app
-        pos: 4
-      - name: Obsidian
-        path: /Applications/Obsidian.app
-      - name: Notion Calendar
-        path: /Applications/Notion Calendar.app
+    # Commenting these out because I was hitting dockutil issues
+    # dockitems_remove:
+    #   - Launchpad
+    #   - Safari
+    #   - Mail
+    #   - Maps
+    #   - FaceTime
+    #   - Calendar
+    #   - Notes
+    #   - Freeform
+    #   - TV
+    #   - Music
+    #   - News
+    #   - App Store
+    #
+    # dockitems_persist:
+    #   - name: WezTerm
+    #     path: /Applications/WezTerm.app
+    #   - name: Arc
+    #     path: /Applications/Arc.app
+    #     pos: 2
+    #   - name: Slack
+    #     path: /Applications/Slack.app
+    #     pos: 3
+    #   - name: Spotify
+    #     path: /Applications/Spotify.app
+    #     pos: 4
+    #   - name: Obsidian
+    #     path: /Applications/Obsidian.app
+    #   - name: Notion Calendar
+    #     path: /Applications/Notion Calendar.app
 
     cargo_tmp: /tmp
 
@@ -117,7 +119,7 @@
 
   roles:
     - geerlingguy.mac.homebrew
-    - geerlingguy.mac.dock
+    # - geerlingguy.mac.dock
 
 - name: Install Cargo
   hosts: all

@@ -5,75 +5,71 @@
     homebrew_installed_packages:
       # Not sure why this isn't working
       # - 1password-cli
+      - 1password
+      - anki
       - ansible
+      - arc
       - autopep8
       - awscli
       - bat
       - cairo
       - composer
       - difftastic
+      - dropbox
       - dtrx
       - entr
       - eza
       - fd
       - ffmpeg
+      - figma
       - fzf
       - gh
       - ghostty
       - git
       - git-lfs
-      - gum
       - gnu-sed
+      - gum
       - htop
       - hugo
       - java
       - jq
+      - keepingyouawake
+      - linearmouse
       - mprocs
       - neovim
-      - pango
-      - php
-      - pixman
-      - pkg-config
-      - ripgrep
-      - shellcheck
-      - shfmt
-      - starship
-      - stow
-      - stylua
-      - tldr
-      - tmux
-      - tree
-      - unzip
-      - vale
-      # - volta
-      - watch
-      - wget
-      - yamlfmt
-      - yt-dlp
-      - zsh
-
-    homebrew_cask_apps:
-      - 1password
-      - alacritty
-      - arc
-      - dropbox
-      - figma
-      - keepingyouawake
-      - linear-linear
-      - linearmouse
       - netnewswire
       - notion
       - notion-calendar
       - obsidian
       - orbstack
+      - pango
+      - php
+      - pixman
+      - pkg-config
       - raycast
+      - ripgrep
+      - shellcheck
+      - shfmt
       - slack
-      - tailscale
       - spotify
+      - starship
+      - stow
+      - stylua
+      - tailscale
+      - tldr
+      - tmux
+      - tree
+      - unzip
+      - vale
       - visual-studio-code
       - vlc
-      - wezterm
+      # - volta
+      - watch
+      - wget
+      - yamlfmt
+      - yt-dlp
       - zoom
+      - zsh
 
     # Commenting these out because I was hitting dockutil issues
     # dockitems_remove:
